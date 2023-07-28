@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lauren Miles\\Projects\\RetailResale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj": {}
+    "C:\\Users\\Lauren Miles\\Projects\\retail-resale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lauren Miles\\Projects\\RetailResale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj": {
+    "C:\\Users\\Lauren Miles\\Projects\\retail-resale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lauren Miles\\Projects\\RetailResale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj",
+        "projectUniqueName": "C:\\Users\\Lauren Miles\\Projects\\retail-resale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj",
         "projectName": "RetailResaleApi",
-        "projectPath": "C:\\Users\\Lauren Miles\\Projects\\RetailResale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj",
+        "projectPath": "C:\\Users\\Lauren Miles\\Projects\\retail-resale\\RetailResaleApi\\RetailResaleApi\\RetailResaleApi.csproj",
         "packagesPath": "C:\\Users\\Lauren Miles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lauren Miles\\Projects\\RetailResale\\RetailResaleApi\\RetailResaleApi\\obj\\",
+        "outputPath": "C:\\Users\\Lauren Miles\\Projects\\retail-resale\\RetailResaleApi\\RetailResaleApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lauren Miles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
