@@ -13,5 +13,7 @@ namespace RetailResaleApi.Context
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<RetailResaleApi.Data.Entities.Product>? Product { get; set; }
     }
 }

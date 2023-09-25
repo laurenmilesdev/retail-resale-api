@@ -13,7 +13,6 @@ namespace RetailResaleApi.Data.Mapping
             builder.Property(p => p.Name).HasMaxLength(50);
             builder.Property(p => p.Description).HasMaxLength(250);
             builder.Property(p => p.Size).HasMaxLength(10);
-            builder.Property(p => p.Condition).HasMaxLength(50);
             builder.Property(p => p.Brand).HasMaxLength(50);
 
             base.Configure(builder);

@@ -8,7 +8,8 @@ namespace RetailResaleApi.Data.Entities
         public string Description { get; set; } = null!;
         public string Size { get; set; } = null!;
         public SizeType SizeType { get; set; }
-        public string Condition { get; set; } = null!;
+        public Condition Condition { get; set; } = null!;
+        public int ConditionId { get; set; }
         public bool IsSold { get; set; }
         public SubCategory SubCategory { get; set; } = null!;
         public int SubCategoryId { get; set; }

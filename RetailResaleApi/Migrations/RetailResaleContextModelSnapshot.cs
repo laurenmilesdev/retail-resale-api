@@ -96,6 +96,50 @@ namespace RetailResaleApi.Migrations
                         });
                 });
 
+            modelBuilder.Entity("RetailResaleApi.Data.Entities.Condition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Condition");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Value = "Brand New"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Value = "Like New"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Value = "Used - Excellent"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Value = "Used - Good"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Value = "Used - Fair"
+                        });
+                });
+
             modelBuilder.Entity("RetailResaleApi.Data.Entities.Costs", b =>
                 {
                     b.Property<int>("Id")
@@ -185,10 +229,8 @@ namespace RetailResaleApi.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Condition")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("ConditionId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -223,6 +265,8 @@ namespace RetailResaleApi.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ConditionId");
 
                     b.HasIndex("SubCategoryId");
 
@@ -1012,11 +1056,19 @@ namespace RetailResaleApi.Migrations
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.Product", b =>
                 {
+                    b.HasOne("RetailResaleApi.Data.Entities.Condition", "Condition")
+                        .WithMany()
+                        .HasForeignKey("ConditionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("RetailResaleApi.Data.Entities.SubCategory", "SubCategory")
                         .WithMany()
                         .HasForeignKey("SubCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Condition");
 
                     b.Navigation("SubCategory");
                 });
