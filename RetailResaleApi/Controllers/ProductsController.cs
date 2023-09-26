@@ -26,8 +26,6 @@ namespace RetailResaleApi.Controllers
         {
             var products = await _productService.GetProducts();
 
-            if (products == null) return NotFound();
-
             return !products.IsNullOrEmpty() ? products.ToList() : NotFound();
         }
 

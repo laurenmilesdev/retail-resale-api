@@ -14,6 +14,7 @@ namespace RetailResaleApi.Services
             var product = await DbContext.Set<Product>()
                 .Include(ctx => ctx.SubCategory)
                 .ThenInclude(ctx => ctx.Category)
+                .Include(p => p.Condition)
                 .FirstOrDefaultAsync(ctx => ctx.Id == id);
 
             return product;
@@ -24,6 +25,7 @@ namespace RetailResaleApi.Services
             var products = await DbContext.Set<Product>()
                .Include(p => p.SubCategory)
                .ThenInclude(p => p.Category)
+               .Include(p => p.Condition)
                .ToListAsync();
 
             return products;

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RetailResaleApi.Data.Entities;
 
 namespace RetailResaleApi.Context
 {
@@ -15,5 +16,7 @@ namespace RetailResaleApi.Context
         }
 
         public DbSet<RetailResaleApi.Data.Entities.Product>? Product { get; set; }
+
+        public DbSet<RetailResaleApi.Data.Entities.Condition>? Condition { get; set; }
     }
 }
