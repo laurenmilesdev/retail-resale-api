@@ -21,7 +21,7 @@ namespace RetailResaleApi.Controllers
 
         // GET: api/Conditions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Condition>>> GetCondition()
+        public async Task<ActionResult<IEnumerable<Condition>>> GetConditions()
         {
             var conditions = await _conditionService.GetConditions();
 

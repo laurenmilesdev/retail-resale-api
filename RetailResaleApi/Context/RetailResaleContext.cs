@@ -18,5 +18,9 @@ namespace RetailResaleApi.Context
         public DbSet<RetailResaleApi.Data.Entities.Product>? Product { get; set; }
 
         public DbSet<RetailResaleApi.Data.Entities.Condition>? Condition { get; set; }
+
+        public DbSet<RetailResaleApi.Data.Entities.Category>? Category { get; set; }
+
+        public DbSet<RetailResaleApi.Data.Entities.SubCategory>? SubCategory { get; set; }
     }
 }

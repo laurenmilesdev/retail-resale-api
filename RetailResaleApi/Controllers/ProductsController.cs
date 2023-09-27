@@ -22,7 +22,7 @@ namespace RetailResaleApi.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProduct()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             var products = await _productService.GetProducts();
 

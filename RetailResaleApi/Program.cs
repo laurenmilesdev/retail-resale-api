@@ -9,8 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<RetailResaleContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RetailResaleDb")));
 
-builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IConditionService, ConditionService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

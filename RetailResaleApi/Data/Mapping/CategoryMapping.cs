@@ -7,6 +7,9 @@ namespace RetailResaleApi.Data.Mapping
     {
         public override void Configure(EntityTypeBuilder<Category> builder)
         {
+            builder.HasMany(p => p.SubCategories)
+                .WithOne(p => p.Category)
+                .HasForeignKey(p => p.CategoryId);
             builder.HasData(
                 new
                 {

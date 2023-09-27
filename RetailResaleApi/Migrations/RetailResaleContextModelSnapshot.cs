@@ -36,7 +36,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
 
                     b.HasData(
                         new
@@ -110,7 +110,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Condition");
+                    b.ToTable("Condition", (string)null);
 
                     b.HasData(
                         new
@@ -159,7 +159,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Costs");
+                    b.ToTable("Costs", (string)null);
                 });
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.ListingSite", b =>
@@ -181,7 +181,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ListingSite");
+                    b.ToTable("ListingSite", (string)null);
                 });
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.ListingSiteProduct", b =>
@@ -214,7 +214,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ListingSiteProduct");
+                    b.ToTable("ListingSiteProduct", (string)null);
                 });
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.Product", b =>
@@ -270,7 +270,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasIndex("SubCategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.Sold", b =>
@@ -300,7 +300,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasIndex("ListingSiteProductId");
 
-                    b.ToTable("Sold");
+                    b.ToTable("Sold", (string)null);
                 });
 
             modelBuilder.Entity("RetailResaleApi.Data.Entities.SubCategory", b =>
@@ -322,7 +322,7 @@ namespace RetailResaleApi.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("SubCategory");
+                    b.ToTable("SubCategory", (string)null);
 
                     b.HasData(
                         new

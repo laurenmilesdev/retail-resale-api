@@ -342,3 +342,6 @@ C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\obj
 C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\obj\Debug\net6.0\RetailResaleApi.pdb
 C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\obj\Debug\net6.0\RetailResaleApi.genruntimeconfig.cache
 C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\obj\Debug\net6.0\ref\RetailResaleApi.dll
+C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Lauren Miles\Projects\retail-resale\RetailResaleApi\RetailResaleApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
