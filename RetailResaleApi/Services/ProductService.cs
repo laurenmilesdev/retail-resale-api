@@ -26,6 +26,7 @@ namespace RetailResaleApi.Services
                .Include(p => p.SubCategory)
                .ThenInclude(p => p.Category)
                .Include(p => p.Condition)
+               .Include(p => p.ListingSiteProducts)
                .ToListAsync();
 
             return products;
