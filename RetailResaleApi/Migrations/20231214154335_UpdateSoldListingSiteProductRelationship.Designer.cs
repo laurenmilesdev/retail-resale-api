@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RetailResaleApi.Context;
 
@@ -11,9 +12,11 @@ using RetailResaleApi.Context;
 namespace RetailResaleApi.Migrations
 {
     [DbContext(typeof(RetailResaleContext))]
-    partial class RetailResaleContextModelSnapshot : ModelSnapshot
+    [Migration("20231214154335_UpdateSoldListingSiteProductRelationship")]
+    partial class UpdateSoldListingSiteProductRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -9,5 +9,7 @@
         public double ListedPrice { get; set; }
         public DateTime? DateListed { get; set; }
         public string? UrlToListing { get; set; } = null!;
+        public Sold? Sold { get; set; } = null;
+        public int? SoldId { get; set; } = null;
     }
 }
